@@ -1,0 +1,297 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+@font-face {
+  font-family: "Montserrat";
+  src: url(https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap);
+}
+@font-face {
+  font-family: "Fedra";
+  font-weight: 400;
+  src: url('./font/FSerStdA-Medium.otf');
+}
+@font-face {
+  font-family: "Fedra";
+  font-weight: 500;
+  src: url('./font/FedraSansStd-Book.otf');
+}
+body,
+html {
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+  font-family: "Fedra", "Comic Sans";
+  color: #6e665b;
+  background: url(https://consciousplanet.ishayoga.eu/wp-content/uploads/2021/12/home-banner-bg.jpg)
+    center center no-repeat #f7f1e3;
+}
+br {
+  content: "";
+  margin: 2em;
+  display: block;
+  font-size: 24%;
+}
+h1 {
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 0px;
+}
+h3 {
+  margin-top: 0px;
+  font-size: 1.05rem;
+}
+h4 {
+  margin: 0;
+  padding: 0;
+}
+h5 {
+  padding-top: 0px;
+  margin-top: 0px;
+}
+
+#ctrl-mobile {
+  display: none;
+}
+#editing {
+  display: block;
+}
+
+.main_cp {
+  padding: 40px 0px;
+  margin: 0px auto;
+  width: 900px;
+  display: block;
+  overflow: hidden;
+  height: 100vh;
+  height: 100dvh;
+}
+
+.center_cp {
+  width: 500px;
+  height: 500px;
+  float: left;
+  position: relative;
+}
+
+.side_cp {
+  width: 360px;
+  float: right;
+}
+
+.card {
+  background-color: rgb(252, 249, 242);
+  padding: 18px 18px 6px 18px;
+  border-radius: 16px;
+  margin-top: 24px;
+  position: relative;
+}
+#msgonly.card {
+  padding: 16px;
+  display: flex;
+  justify-content: center;
+  vertical-align: middle;
+  align-items: center;
+}
+#msgonly.card svg {
+  margin-right: 1rem;
+}
+.card div {
+  display: inline-block;
+}
+
+.card:first-child {
+  margin-top: 0;
+}
+.card2 {
+  text-align: left;
+  border-radius: 16px;
+  margin-top: 12px;
+  text-align: center;
+}
+.controls {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: none;
+  z-index: 2;
+}
+input {
+  padding: 6px;
+  font-size: 1rem;
+  border-width: 0px;
+  border-color: #cccccc;
+  background-color: #ffffff;
+  color: #000000;
+  border-style: solid;
+  border-radius: 5px;
+  border: 1px solid rgb(66 66 66 / 53%);
+  width: 100%;
+  font-family: "Fedra";
+}
+input.ecardinput {
+  opacity: 0 !important;
+  display: inline-block;
+  width: 1px;
+  height: 1px;
+  margin-left: -6px;
+  cursor: pointer;
+}
+input.ecardinput + label {
+  border-radius: 8px;
+  overflow: hidden;
+  display: inline-block;
+  border: 2px solid transparent;
+  margin-right: 12px;
+  cursor: pointer;
+}
+input.ecardinput:checked + label {
+  border: 2px solid #e26b11 !important;
+}
+
+#color {
+  width: 56px;
+}
+#submit {
+  padding: 8px 22px;
+  font-size: 0.9375rem;
+  min-width: 64px;
+  box-sizing: border-box;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  font-family: "Fedra", "Fedra Sans", sans-serif;
+  font-weight: 500;
+  line-height: 1.75;
+  border-radius: 4px;
+  text-transform: uppercase;
+  background: #e26b11 !important;
+  color: #fff;
+  width: 100%;
+  border: 0px;
+  cursor: pointer;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+#font-family {
+  width: 100px;
+}
+
+select,
+input#color {
+  height: 2rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.image-thumb {
+  width: 68px;
+  height: auto;
+}
+
+.language-selector-container {
+  margin: 0 0 1rem 0;
+  line-height: 2rem;
+  display: flex !important;
+}
+
+.language-selector {
+  width: 50px;
+  margin-left: auto;
+  padding: 0;
+  font-weight: bold;
+  border: 1px solid #e26b10;
+  color: #000;
+}
+.careerfy-mobilehder-strip {
+  background-color: rgba(126, 182, 76, 1);
+}
+
+form {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+#language-selector-desktop {
+  display: none;
+}
+
+#language-selector-mobile {
+  display: none;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+.custom-file-upload {
+  padding: 8px 22px;
+  font-size: 0.9375rem;
+  min-width: 64px;
+  box-sizing: border-box;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  font-family: "Fedra", "Fedra Sans", sans-serif;
+  font-weight: 500;
+  line-height: 1.75;
+  border-radius: 4px;
+  text-transform: uppercase;
+  background: #7db54b !important;
+  width: 100%;
+  color: white;
+  display: inline-block;
+  cursor: pointer;
+}
+
+canvas {
+    border-radius: 1rem;
+  box-shadow: 1.9px 2.3px 5.3px rgba(0, 0, 0, 0.012),
+    6.5px 7.8px 17.9px rgba(0, 0, 0, 0.018), 29px 35px 80px rgba(0, 0, 0, 0.03);
+}
+
+@media only screen and (max-width: 768px) {
+  h1 {
+    text-align: center;
+    padding-top: 0rem;
+    padding-bottom: 0rem;
+    font-size: 1.2rem;
+  }
+
+  .main_cp {
+    width: 100%;
+    overflow: hidden;
+    padding: 0;
+  }
+  .center_cp {
+    width: 100%;
+    height: auto;
+    float: none !important;
+    display: block;
+  }
+  .side_cp {
+    width: 100%;
+    float: none;
+    display: block;
+    padding: 12px 24px 24px 24px;
+    box-sizing: border-box;
+  }
+  .card {
+    margin-top: 0;
+  }
+  card:first-child {
+    margin-top: 24px;
+  }
+  #ctrl-mobile {
+    display: block !important;
+    overflow: scroll;
+    padding: 12px;
+  }
+  #ctrl-mobile form {
+    margin: 0 0 8px;
+    box-sizing: border-box;
+    display: flex;
+    width: 250%;
+  }
+  #ctrl-desktop {
+    display: none;
+  }
+}

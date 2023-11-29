@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+
+
+<p><script src="https://marinmetohu.com/me/ecard/js/fabric.js"></script> <style>
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+  @font-face {
+    font-family: 'Montserrat';
+    src: url(https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap);
+  }
+  body,html{
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+    font-family: 'Fedra', 'Comic Sans';
+    background: url(https://marinmetohu.com/me/ecard/home-banner-bg.jpg) center center no-repeat #f7f1e3;
+  }
+  br {
+    content: "";
+    margin: 2em;
+    display: block;
+    font-size: 24%;
+  }
+  h1{
+    text-align: center;
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+  h3 {
+    margin-top: 0px;
+    font-size: 1.05rem;
+  }
+  h4{
+    margin:0;
+    padding:0;
+  }
+  h5 {
+    padding-top: 0px;
+    margin-top: 0px;
+  }
+
+  #ctrl-mobile{
+    display: none;
+  }
+  #editing{
+    display: block;
+  }
+
+  .main_cp{
+    padding: 40px 0px;
+    margin: 0px auto;
+    width: 900px;
+    display: block;
+    overflow: hidden;
+  }
+
+  .center_cp{
+    width: 500px;
+    height:500px;
+    float: left;
+    position: relative;
+  }
+
+  .side_cp {
+    width: 350px;
+    float: right;
+  }
+
+  .card {
+    background-color: rgb(252, 249, 242);
+    padding: 24px;
+    border-radius: 16px;
+    margin-top: 24px;
+    position: relative;
+  }
+  #msgonly.card {
+    padding: 16px;
+    display: flex;
+    justify-content: center;
+    vertical-align: middle;
+    align-items: center;
+  }
+  .card div {
+    display: inline-block;
+  }
+
+  .card:first-child{
+    margin-top: 0;
+  }
+  .card2 {
+    text-align: left;
+    border-radius: 16px;
+    margin-top: 24px;
+    text-align: center;
+  }
+  .controls{
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    display: none;
+    z-index: 2;
+  }
+
+  input{
+    padding: 6px;
+    font-size: 1rem;
+    border-width: 0px;
+    border-color: #CCCCCC;
+    background-color: #FFFFFF;
+    color: #000000;
+    border-style: solid;
+    border-radius: 5px;
+    border: 1px solid rgb(66 66 66 / 53%);
+    width: 100%;
+    font-family: 'Fedra';
+  }
+  input.ecardinput{
+    opacity: 0!important;
+    display:inline-block;
+    width: 1px;
+    height: 1px;
+  }
+  input.ecardinput+label{
+    border-radius: 8px;
+    overflow: hidden;
+    display: inline-block;
+    border: 2px solid rgba(0,0,0,0);
+  }
+  input.ecardinput:checked+label{
+    border: 2px solid #e26b11!important;
+  }
+
+  #color{
+    width: 56px;
+  }
+  #submit{
+    padding: 8px 22px;
+    font-size: 0.9375rem;
+    min-width: 64px;
+    box-sizing: border-box;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    font-family: "Fedra Sans", sans-serif;
+    font-weight: 500;
+    line-height: 1.75;
+    border-radius: 4px;
+    text-transform: uppercase;
+    background: #e26b11 !important;
+    color: #FFF;
+    width: 100%;
+    border: 0px;
+    cursor: pointer;
+    text-align: center;
+  }
+
+  #font-family {
+    width: 100px;
+  }
+
+  select, input#color {
+    height: 2rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  @media only screen and (max-width: 768px) {
+    h1 {
+      text-align: center;
+      padding-top: 0rem;
+      padding-bottom: 0rem;
+      font-size: 1.2rem;
+    }
+
+    .main_cp {
+      width: 100%;
+      overflow: hidden;
+      padding: 0;
+    }
+    .center_cp{
+      width: 100%;
+      height:auto;
+      float: none!important;
+      display: block;
+    }
+    .side_cp {
+      width: 100%;
+      float: none;
+      display: block;
+      padding: 24px;
+      box-sizing: border-box;
+    }
+    .card {
+      margin-top: 16px;
+    }
+    card:first-child {
+      margin-top: 24px;
+    }
+    #ctrl-mobile {
+      display: block!important;
+      overflow: scroll;
+      padding: 8px 0;
+    }
+    #ctrl-mobile form {
+      width : 130%;
+      margin: 0 0 8px;
+    }
+    #ctrl-desktop{
+      display: none;
+    }
+  }
+</style></p>
+<main class="main_cp">
+  <section id="editing">
+    <div class="center_cp">
+      <div id="controls" class="controls"><select id="font-family">
+        <option selected="selected" value="Montserrat">Montserrat</option>
+        <option value="Times New Roman">Times New Roman</option>
+        <option value="Comic Sans">Comic Sans</option>
+        <option value="Helvetica">Helvetica</option>
+      </select><input id="color" name="body" type="color" value="#f6b73c" /></div>
+      <div id="ctrl-mobile" class="card"><form id="mobile">
+        <div><input id="inpcard2m" class="ecardinput" checked="checked" name="ecardm" type="radio" value="2" /> <label for="inpcard2m"><img id="my-image-2" style="width: 68px; height: auto;" src="https://consciousplanet.ishayoga.eu/wp-content/uploads/2021/12/card_2.jpg" /></label></div>
+        <div><input id="inpcard3m" class="ecardinput" name="ecardm" type="radio" value="3" /> <label for="inpcard3m"><img id="my-image-3" style="width: 68px; height: auto;" src="https://consciousplanet.ishayoga.eu/wp-content/uploads/2021/12/card_3.jpg" /></label></div>
+        <div><input id="inpcard4m" class="ecardinput" name="ecardm" type="radio" value="4" /> <label for="inpcard4m"><img id="my-image-4" style="width: 68px; height: auto;" src="https://consciousplanet.ishayoga.eu/wp-content/uploads/2021/12/card_4.jpg" /></label></div>
+        <div><input id="inpcard5m" class="ecardinput" name="ecardm" type="radio" value="5" /> <label for="inpcard5m"><img id="my-image-5" style="width: 68px; height: auto;" src="https://consciousplanet.ishayoga.eu/wp-content/uploads/2021/12/card_5.jpg" /></label></div>
+        <div><input id="inpcard1m" class="ecardinput" name="ecardm" type="radio" value="1" /> <label for="inpcard1m"><img id="my-image" style="width: 68px; height: auto;" src="https://consciousplanet.ishayoga.eu/wp-content/uploads/2021/12/card_1.jpg" /></label></div>
+      </form></div>
+      <canvas id="c" style="border: 1px solid #333; box-shadow: 0px 8px 16px rgba(0,0,0,0.2), 0px -8px 16px rgba(0,0,0,0.1);"></canvas></div>
+    <div id="ctrl-desktop" class="card">
+      <h3>Choose the e-Card</h3>
+      <form>
+        <div><input id="inpcard2" class="ecardinput" checked="checked" name="ecard" type="radio" value="2" /> <label for="inpcard2"><img id="my-image-2" style="width: 68px; height: auto;" src="https://consciousplanet.ishayoga.eu/wp-content/uploads/2021/12/card_2.jpg" /></label></div>
+        <div><input id="inpcard3" class="ecardinput" name="ecard" type="radio" value="3" /> <label for="inpcard3"><img id="my-image-3" style="width: 68px; height: auto;" src="https://consciousplanet.ishayoga.eu/wp-content/uploads/2021/12/card_3.jpg" /></label></div>
+        <div><input id="inpcard4" class="ecardinput" name="ecard" type="radio" value="4" /> <label for="inpcard4"><img id="my-image-4" style="width: 68px; height: auto;" src="https://consciousplanet.ishayoga.eu/wp-content/uploads/2021/12/card_4.jpg" /></label></div>
+        <div><input id="inpcard5" class="ecardinput" name="ecard" type="radio" value="5" /> <label for="inpcard5"><img id="my-image-5" style="width: 68px; height: auto;" src="https://consciousplanet.ishayoga.eu/wp-content/uploads/2021/12/card_5.jpg" /></label></div>
+        <div><input id="inpcard1" class="ecardinput" name="ecard" type="radio" value="1" /> <label for="inpcard1"><img id="my-image" style="width: 68px; height: auto;" src="https://consciousplanet.ishayoga.eu/wp-content/uploads/2021/12/card_1.jpg" /></label></div>
+      </form></div>
+    <div class="card2">
+      <div id="submit">Download</div>
+      <p>Share it with family &amp; friends</p>
+    </div>
+    <div id="msgonly" class="card">Double click on the text in the card to edit</div>
+  </section>
+  <script>
+    const txtWidth = 200;
+
+    const export_multiplier = 2;
+
+    const url = "https://consciousplanet.ishayoga.eu/wp-content/uploads/2021/12/";
+
+    var _fontSize = 24;
+    var _fontSizeQuote = 16;
+
+    let box = document.querySelector('.center_cp');
+    let _width = box.offsetWidth;
+
+    let middle_h = _width/2 - txtWidth/2;
+    let middle_r = Math.floor(_width/1.8 - txtWidth/2);
+    let middle_f = _width/2 - _width/4;
+    let right_h = Math.floor(_width * 0.75) - Math.floor(txtWidth/2);
+
+    let txt1_top = [Math.floor(_width * 0.05), Math.floor(_width * 0.07), Math.floor(_width * 0.03), Math.floor(_width * 0.15)];
+    let txt2_top = [Math.floor(_width * 0.45 ), Math.floor(_width * 0.5 ), Math.floor(_width * 0.25 )];
+
+    var txtPositions = {
+      txt1:  [{left: right_h,  top: txt1_top[1], width: txtWidth, fill: '#ffffff'},
+        {left: middle_h, top: txt1_top[1], width: txtWidth, fill: '#fce595'},
+        {left: middle_r, top: txt1_top[2], width: _width/2, fill: '#ffffff'},
+        {left: middle_h, top: txt1_top[2], width: _width/2, fill: '#ffffff' },
+        {left: middle_f, top: txt1_top[3], width: _width/2, fill: '#fce595'},
+      ],
+      txt2: [ {left: right_h,  top: txt2_top[0], width: txtWidth, fill: '#ffffff'},
+        {left: middle_h, top: txt2_top[1], width: txtWidth, fill: '#fce595'},
+        {left: middle_r, top: txt2_top[2], width: txtWidth, fill: '#ffffff'},
+        {left: middle_h, top: txt2_top[2], width: txtWidth, fill: '#ffffff'},
+        {left: middle_h, top: txt2_top[0], width: txtWidth, fill: '#fce595'},
+      ],
+    }
+
+    const txtOpt = {
+      txt1: [{ fill: '#ffffff', fontSize: _fontSize,  fontFamily: 'Montserrat',  textAlign: 'center', lineHeight:1}],
+      txt2: [{ fill: '#ffffff', fontSize: _fontSize,  fontFamily: 'Montserrat', textAlign: 'center', lineHeight:1}],
+    };
+
+    var canvas = new fabric.Canvas('c');
+    canvas.setHeight(_width);
+    canvas.setWidth(_width);
+
+    canvas.on('selection:created', function ( ) {
+      document.querySelector("#controls").style.display = "block";
+    });
+    canvas.on('selection:cleared', function( ) {
+      document.querySelector("#controls").style.display = "none";
+    });
+
+    fabric.Image.fromURL(url+'card_2.jpg', function(img, isError) {
+      img.scaleToWidth(_width);
+      img.set({ originX: 'left', originY: 'top' });
+      canvas.setBackgroundImage(img, canvas.renderAll.bind(canvas));
+    }, { crossOrigin: 'Anonymous' });
+
+    let text = new fabric.Textbox('Best Wishes!',txtOpt.txt1[0] );
+    let text2 = new fabric.Textbox('With love,\n John & family', txtOpt.txt2[0]);
+
+    canvas.add(text);
+    canvas.add(text2);
+
+    updateTxtPositions(1);
+    canvas.requestRenderAll();
+
+    function changeBg(str, nr) {
+      fabric.Image.fromURL(url+str, function(img, isError) {
+        img.scaleToWidth(_width);
+        img.set({ originX: 'left', originY: 'top', });
+        canvas.setBackgroundImage(img, canvas.renderAll.bind(canvas));
+
+        updateTxtPositions(nr);
+        canvas.requestRenderAll();
+      }, {crossOrigin: 'Anonymous'});
+    }
+    function updateTxtPositions(nr){
+      text.set( txtPositions["txt1"][nr] );
+      text2.set( txtPositions["txt2"][nr] );
+    }
+
+    // Apply selected font on change
+    document.getElementById('font-family').onchange = function() {
+      canvas.getActiveObject().set("fontFamily", this.value);
+      canvas.requestRenderAll();
+    };
+
+    document.getElementById('color').oninput = function() {
+      canvas.getActiveObject().set("fill", this.value);
+      canvas.requestRenderAll();
+    };
+
+    function downloadFabric(){
+      console.log('downlaod');
+      var dataURL = canvas.toDataURL({
+        format: "png",left: 0, top: 0, width: canvas.width, height: canvas.height,
+        quality: 1,
+        multiplier: export_multiplier
+      }, {crossOrigin: 'Anonymous'});
+      const link = document.createElement('a');
+      link.download = 'https://consciousplanet.ishayoga.eu/conscious-holidays.png';
+      link.href = dataURL;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+  </script></main><!-- /wp:html -->
+
+<!-- wp:image -->
+<figure class="wp-block-image"><img alt="" /></figure>
